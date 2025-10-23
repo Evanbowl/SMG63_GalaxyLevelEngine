@@ -362,6 +362,7 @@ mr r4, r28
 .GLE HOOK PARA 0 pGalaxySelectInfo #The current GalaxySelectInfo instance. This is the actual LayoutActor that you can do things with
 .GLE HOOK PARA 1 pGalaxyName #The name of the current Galaxy that is being processed.
 .GLE HOOK TYPE Void
+.GLE HOOK RETN void
 .GLE HOOK KAMK kmCall
 .GLE HOOK END
 nop
@@ -424,6 +425,7 @@ mr r4, r28
 .GLE HOOK PARA 0 pGalaxySelectInfo #The current GalaxySelectInfo instance. This is the actual LayoutActor that you can do things with.
 .GLE HOOK PARA 1 pGalaxyName #The name of the current Galaxy that is being processed.
 .GLE HOOK TYPE Void
+.GLE HOOK RETN void
 .GLE HOOK KAMK kmCall
 .GLE HOOK END
 nop

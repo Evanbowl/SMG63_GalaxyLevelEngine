@@ -145,7 +145,7 @@ bl initLayoutManager__11LayoutActorFPCcUl
 
 mr r3, r31
 addi r4, r27, ScenarioSelect - ScenarioSelectLayout
-li r5, 1
+li r5, 2
 bl createAndAddPaneCtrl__2MRFP11LayoutActorPCcUl
 mr r3, r31
 addi r4, r27, ScenarioFrame - ScenarioSelectLayout
@@ -376,6 +376,16 @@ addi r11, r1, 0x40
 bl _savegpr_24
 mr r31, r3
 bl showLayout__2MRFP11LayoutActor
+
+mr r3, r31
+.GLE HOOK START
+.GLE HOOK NAME onScenarioSelectLayoutInit__3GLEFP11LayoutActor
+.GLE HOOK DESC #Using this hook will allow one to add additional functionality for when the GalaxyInfoBanner is unlocked.
+.GLE HOOK PARA 0 pScenarioSelectLayout #The current GalaxySelectInfo instance. This is the actual LayoutActor that you can do things with.
+.GLE HOOK TYPE Void
+.GLE HOOK RETN void
+.GLE HOOK KAMK kmCall
+.GLE HOOK END
 
 mr r3, r31
 addi      r4, r1, 0x0C
